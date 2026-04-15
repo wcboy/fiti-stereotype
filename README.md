@@ -1,93 +1,99 @@
 # Finance Bro Type Indicator (FBTI)
 
-基于670个金融调侃类视频内容分析的金融人刻板印象人格测试项目。
+A personality test based on stereotypes in the finance industry, developed from content analysis of 670 finance-related satire videos.
 
-## 项目背景
+[中文版](./README.zh-CN.md)
 
-本项目源自对670个金融调侃类视频的内容分析，提取了：
-- 14个独立金融梗
-- 38个刻板印象特征
-- 2种核心人格画像
+## Background
 
-将这些分析结果转化为可交互的人格测试工具。
+This project is derived from content analysis of 670 finance satire videos, extracting:
+- 14 independent finance tropes
+- 38 stereotype characteristics
+- 2 core personality archetypes
 
-## 技术栈
+Transformed into an interactive personality assessment tool.
 
-- Vite + 原生 JavaScript
-- 无框架依赖，轻量级实现
-- 支持 PWA 离线使用
+## Tech Stack
 
-## 项目结构
+- Vite + Vanilla JavaScript
+- No framework dependencies, lightweight implementation
+- PWA support for offline usage
+
+## Project Structure
 
 ```
 finance-bro-type-indicator/
 ├── data/
-│   ├── config.json          # 配置文件
-│   ├── dimensions.json      # 12维度定义（认知/行为/社交）
-│   ├── questions.json       # 30道测试题
-│   ├── types.json           # 15种人格类型 + 彩蛋
-│   └── interpretations/     # 维度解读
+│   ├── config.json          # Configuration
+│   ├── dimensions.json      # 12 dimensions (Cognitive/Behavioral/Social)
+│   ├── questions.json       # 30 test questions
+│   ├── types.json           # 16 personality types + Easter eggs
+│   └── interpretations/     # Dimension interpretations
 ├── src/
-│   ├── main.js             # 入口
-│   ├── engine.js           # 评分引擎
-│   ├── quiz.js             # 答题逻辑
-│   ├── result.js           # 结果渲染
-│   ├── chart.js            # 雷达图
-│   ├── poster.js           # 分享海报生成
-│   ├── utils.js            # 工具函数
-│   └── style.css           # 样式
-└── index.html              # 入口页面
+│   ├── main.js             # Entry point
+│   ├── engine.js           # Scoring engine
+│   ├── quiz.js             # Quiz logic
+│   ├── result.js           # Result rendering
+│   ├── chart.js            # Radar chart
+│   ├── poster.js           # Share poster generator
+│   ├── utils.js            # Utilities
+│   └── style.css           # Styles
+└── index.html              # Entry page
 ```
 
-## 人格类型列表
+## Personality Types
 
-### 标准类型 (16种)
+### Standard Types (16)
 
-| 代号 | 人格 | 副标题 |
-|------|------|--------|
-| POSER | 金融精英表演者 | 陆家嘴行走的PPT |
-| SNOOP | 草根解构师 | 金融圈卧底记者 |
-| CRAM | 证书收割机 | 考证界永动机 |
-| NEPOT | 关系户收割者 | 资源变现大师 |
-| TOXIC | 面试PUA大师 | 压力测试艺术家 |
-| GRINDER | 加班战神 | 不眠不休永动机 |
-| QUANT | 金融思维入侵者 | 万物皆可估值 |
-| BEAN | 财务背锅侠 | 提篮桥预备役 |
-| BUTTERFLY | 社交收割机 | 人脉资源兑换商 |
-| HOPPER | 跳槽套利者 | 简历迭代专家 |
-| FLEX | 炫富表演艺术家 | 朋友圈富豪 |
-| SLACKER | 躺平哲学家 | 国企养老专业户 |
-| FOMO | 焦虑加速器 | FOMO综合症患者 |
-| PUFFER | 简历整容师 | 百万调研制造机 |
-| ROO | 海归水学历代言人 | QS前50守门员 |
-| SNEAK | 职场老六 | 潜规则猎人 |
+| Code | Personality | Subtitle |
+|------|-------------|----------|
+| POSER | Elite Performer | Walking PPT of Lujiazui |
+| SNOOP | Grassroots Deconstructor | Undercover journalist in finance |
+| CRAM | Certificate Collector | Perpetual motion machine of exams |
+| NEPOT | Nepotism Harvester | Master of resource monetization |
+| TOXIC | Interview PUA Master | Artist of stress testing |
+| GRINDER | Workaholic Warrior | Sleepless perpetual machine |
+| QUANT | Finance Mind Invader | Everything is quantifiable |
+| BEAN | Accounting Scapegoat | Reserve inmate of Tilanqiao Prison |
+| BUTTERFLY | Social Network Harvester | Coffee chat professional |
+| HOPPER | Job-Hopping Arbitrageur | Resume iteration expert |
+| FLEX | Wealth Flex Artist | Millionaire on social media |
+| SLACKER | Chill Philosopher | SOE retirement specialist |
+| FOMO | Anxiety Accelerator | FOMO syndrome patient |
+| PUFFER | Resume Plastic Surgeon | Maker of million-user surveys |
+| ROO | Overseas Degree Defender | QS Top 50 gatekeeper |
+| SNEAK | Corporate Lurker | Hunter of unwritten rules |
 
-### 特殊类型 (彩蛋)
+### Special Types (Easter Eggs)
 
-| 代号 | 人格 | 副标题 |
-|------|------|--------|
-| CHOSEN | 天选关系户 | 金融宇宙终极赢家 |
-| UNCERT | 证书无效论信徒 | 反证书主义先驱 |
-| NPC | 金融路人甲 | 无法归类的隐藏变量 |
+| Code | Personality | Subtitle |
+|------|-------------|----------|
+| CHOSEN | Chosen Nepotist | Ultimate winner of finance universe |
+| UNCERT | Certificate Denier | Pioneer of anti-certification movement |
+| NPC | Finance NPC | Unclassifiable hidden variable |
 
-## 运行项目
+## Getting Started
 
 ```bash
-# 安装依赖
+# Install dependencies
 npm install
 
-# 开发模式
+# Development mode
 npm run dev
 
-# 构建
+# Build for production
 npm run build
 ```
 
-## 数据来源
+## Data Source
 
-- 原始视频数据：670个金融调侃类视频
+- Original video data: 670 finance satire videos
 
-## 致谢
+## Acknowledgments
 
-- 原始项目：https://github.com/niuniu-869/fiti
-- SBTI项目：https://github.com/pingfanfan/SBTI
+- Original project: https://github.com/niuniu-869/fiti
+- SBTI project: https://github.com/pingfanfan/SBTI
+
+## License
+
+MIT
