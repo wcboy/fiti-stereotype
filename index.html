@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#14100a" />
-  <meta name="description" content="Finance Bro Type Indicator — 测测你是哪种金融人？30道尽调问卷，15种金融刻板印象人格，基于670个金融调侃类视频内容分析。" />
+  <meta name="description" content="Finance Bro Type Indicator — 测测你是哪种金融人？19道尽调问卷，19种金融刻板印象人格，基于670个金融调侃类视频内容分析。" />
   <meta name="format-detection" content="telephone=no" />
 
   <title>Finance Bro TI · 测测你是哪种金融人</title>
@@ -14,7 +14,7 @@
   <meta property="og:description" content="测测你是哪种金融人？基于670个金融调侃类视频内容分析" />
   <meta property="og:type" content="website" />
 
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.92em' font-size='92'>💼</text></svg>" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>F</text></svg>" />
 
   <!-- 字体 preconnect，加速首屏 -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -31,36 +31,29 @@
     <!-- ========== 首页 Intro · 变身前 ========== -->
     <section id="page-intro" class="page active">
       <div class="card intro-card">
-        <div class="intro-badge" id="intro-badge">Finance Bro TI · v1.0</div>
+        <div class="intro-badge" id="intro-badge">Finance Bro TI · v2.0</div>
 
         <h1 class="intro-title" id="intro-title">
           Finance Bro<span class="slash">/</span>刻板印象
         </h1>
-        <p class="intro-subtitle" id="intro-subtitle">
-          测测你是哪种金融人<br/>基于670个金融调侃类视频内容分析
-        </p>
 
-        <!-- 典型人设预告（轮播） -->
-        <div class="intro-preview" id="intro-preview">
-          <div class="preview-kicker">▼ 比如说，你可能会是 ▼</div>
-          <div class="preview-card" id="preview-card">
-            <div class="preview-code" id="preview-code">—</div>
-            <div class="preview-cn" id="preview-cn">—</div>
-            <p class="preview-roast" id="preview-roast">—</p>
+        <!-- 横向滚动图片区域 -->
+        <div class="intro-image-marquee" id="intro-marquee">
+          <div class="marquee-track" id="marquee-track">
+            <!-- 图片由JS动态加载 -->
           </div>
-          <div class="preview-dots" id="preview-dots"></div>
         </div>
 
         <ul class="intro-features">
-          <li><span>🧾</span><span>30 道尽调问卷 · 5 分钟速过</span></li>
-          <li><span>💼</span><span>15 种金融刻板印象人格 + 彩蛋</span></li>
-          <li><span>📊</span><span>基于670个金融调侃类视频真实内容分析</span></li>
-          <li><span>📸</span><span>一键生成竖屏分享卡</span></li>
+          <li><span class="feature-num">19</span> 道尽调问卷 · 3 分钟速过</li>
+          <li><span class="feature-num">19</span> 种金融刻板印象人格 + 彩蛋</li>
+          <li>基于 <span class="feature-num">670</span> 个金融调侃类视频真实内容分析</li>
+          <li>一键生成竖屏分享卡</li>
         </ul>
 
         <button id="btn-start" class="btn btn-primary">开始测试</button>
-        <p class="intro-note" id="intro-note">⚠ 约 5 分钟 · 30题 + 彩蛋</p>
-        <p class="intro-credit" id="intro-credit">— 本测评基于真实金融调侃类视频内容分析，纯属娱乐 ——</p>
+        <p class="intro-note" id="intro-note">约 3 分钟 · 19题 + 彩蛋</p>
+        <p class="intro-credit" id="intro-credit">— 本测评基于真实金融调侃类视频内容分析，纯属娱乐 —</p>
       </div>
     </section>
 
@@ -68,14 +61,14 @@
     <section id="page-quiz" class="page">
       <div class="card quiz-card">
         <div class="case-meta">
-          <span class="case-id" id="case-id">CASE 0/30</span>
+          <span class="case-id" id="case-id">CASE 0/19</span>
           <span id="case-dept">DUE DILIGENCE IN PROGRESS</span>
         </div>
 
         <!-- K 线蜡烛进度 -->
         <div class="candle-progress" id="candle-progress"></div>
         <div class="progress-text">
-          尽调完成度 <strong id="progress-text">0 / 33</strong>
+          尽调完成度 <strong id="progress-text">0 / 21</strong>
         </div>
 
         <div class="question-area">
@@ -182,7 +175,7 @@
             <div id="top-list" class="top-list"></div>
 
             <div class="share-cta">
-              <button id="btn-share" class="btn btn-primary">📸 生成分享卡</button>
+              <button id="btn-share" class="btn btn-primary">生成分享卡</button>
               <button id="btn-restart" class="btn btn-secondary">重新测试</button>
             </div>
 
@@ -199,7 +192,6 @@
       <div class="poster-modal-backdrop" id="poster-backdrop"></div>
       <div class="poster-modal-body">
         <div class="poster-modal-hint">
-          <span>💡</span>
           <span>长按保存 · 发朋友圈等 ta 来测</span>
         </div>
         <div class="poster-img-wrap">

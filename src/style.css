@@ -360,10 +360,13 @@ body:not(.app-ready) #app {
   border-left: 3px solid var(--gold);
 }
 .intro-features li span:first-child {
-  font-size: 1.1rem;
-  width: 1.4rem;
-  text-align: center;
   flex-shrink: 0;
+}
+.intro-features li .feature-num {
+  font-weight: 700;
+  color: var(--rouge);
+  font-family: var(--font-stamp);
+  font-size: 1rem;
 }
 
 .intro-note {
@@ -381,6 +384,40 @@ body:not(.app-ready) #app {
   transform: rotate(-0.8deg);
 }
 
+/* —— 横向滚动图片区域 —— */
+.intro-image-marquee {
+  width: 100%;
+  overflow: hidden;
+  margin: 1.5rem 0;
+  position: relative;
+  border-radius: var(--radius-md);
+  background: rgba(26, 20, 10, 0.03);
+}
+.marquee-track {
+  display: flex;
+  gap: 12px;
+  animation: marqueeScroll 30s linear infinite;
+  padding: 8px 0;
+}
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+.marquee-track img {
+  height: 140px;
+  width: auto;
+  border-radius: var(--radius-md);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+.marquee-track img:hover {
+  transform: scale(1.05);
+}
+@keyframes marqueeScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
 /* 大按钮专用 */
 .intro-card .btn-primary {
   width: 100%;
@@ -389,7 +426,7 @@ body:not(.app-ready) #app {
   letter-spacing: 0.14em;
   margin-top: 0.6rem;
 }
-.intro-card .btn-primary::before { content: "▶ "; font-size: 12px; }
+.intro-card .btn-primary::before { content: ""; }
 .intro-card .btn-primary::after {
   content: "Sign";
   font-family: var(--font-script);

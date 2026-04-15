@@ -120,6 +120,43 @@ function initPreviewCarousel() {
 }
 
 /**
+ * 横向滚动图片区域
+ * - 从 data/FrontImage/seprated/ 加载图片
+ * - 复制两份实现无缝循环滚动
+ */
+function initImageMarquee() {
+  const track = byId("marquee-track");
+  if (!track) return;
+
+  // 图片列表（与data/FrontImage/seprated/目录下的文件对应）
+  const images = [
+    "Screenshot 2026-04-15 at 22.42.36.png",
+    "Screenshot 2026-04-15 at 22.42.49.png",
+    "Screenshot 2026-04-15 at 22.42.58.png",
+    "Screenshot 2026-04-15 at 22.43.08.png",
+    "Screenshot 2026-04-15 at 22.43.25.png",
+    "Screenshot 2026-04-15 at 22.43.34.png",
+    "Screenshot 2026-04-15 at 22.43.42.png",
+    "Screenshot 2026-04-15 at 22.43.52.png",
+  ];
+
+  const basePath = "data/FrontImage/seprated/";
+
+  // 清空并创建图片元素（复制两份实现无缝循环）
+  track.innerHTML = "";
+
+  for (let round = 0; round < 2; round++) {
+    images.forEach((imgName) => {
+      const img = document.createElement("img");
+      img.src = basePath + imgName;
+      img.alt = "FBTI 人格展示";
+      img.loading = "lazy";
+      track.appendChild(img);
+    });
+  }
+}
+
+/**
  * 构建 K 线蜡烛进度（真实引擎 v7 - A股风格 + 强随机性）
  *
  * 核心逻辑：
@@ -342,6 +379,7 @@ async function init() {
 
   initTicker();
   initPreviewCarousel();
+  initImageMarquee();
 
   const hits = countDimensionHits(questions.main || []);
 
@@ -367,7 +405,7 @@ async function init() {
 
     // hint
     if (q.special) {
-      setText(questionHint, "🥚 彩蛋题 · 不参与主评分，可能触发隐藏档案");
+      setText(questionHint, "彩蛋题 · 不参与主评分，可能触发隐藏档案");
       questionHint.style.display = "";
     } else if (progress.phase === "anchor") {
       setText(questionHint, "身份识别 · 不参与评分");

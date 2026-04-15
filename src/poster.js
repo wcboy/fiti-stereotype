@@ -414,7 +414,7 @@ export async function renderPoster({
 
   /* ========== §7. Chips ========== */
   const chips = [];
-  if (isEgg) chips.push({ t: "🥚 隐藏档案", bg: theme.rouge, fg: "#111" });
+  if (isEgg) chips.push({ t: "隐藏档案", bg: theme.rouge, fg: "#111" });
   if (primary.rarity)
     chips.push({
       t: `稀有度 ${primary.rarity}`,

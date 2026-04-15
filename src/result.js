@@ -119,7 +119,7 @@ export function renderResult({
   const coverKicker = byId("cover-kicker");
   if (coverKicker) {
     coverKicker.textContent = isEgg
-      ? "— 🥚 HIDDEN FILE · 彩蛋档案已解锁 —"
+      ? "— HIDDEN FILE · 彩蛋档案已解锁 —"
       : "— 测试结果 · Finance Bro 档案 —";
   }
 
@@ -144,7 +144,7 @@ export function renderResult({
   if (chipsWrap) {
     chipsWrap.innerHTML = "";
     if (isEgg) {
-      chipsWrap.appendChild(makeChip("🥚 隐藏档案", "chip-egg"));
+      chipsWrap.appendChild(makeChip("隐藏档案", "chip-egg"));
     }
     if (primary.rarity) {
       chipsWrap.appendChild(makeChip(`稀有度 ${primary.rarity}`, "chip-rare"));
@@ -226,7 +226,7 @@ export function renderResult({
       returnEl.className = `kline-value ${klineStats.returnRate >= 0 ? "positive" : "negative"}`;
     }
     if (returnSubEl) {
-      returnSubEl.textContent = klineStats.returnRate >= 0 ? "📈 盈利" : "📉 亏损";
+      returnSubEl.textContent = klineStats.returnRate >= 0 ? "盈利" : "亏损";
     }
 
     // 辅助指标
