@@ -417,7 +417,20 @@ async function init() {
 
   function handleAnswer(value, originalIdx) {
     const next = quiz.answer(value, originalIdx);
-    if (next) renderQuestion(next, quiz.progress());
+    if (next) {
+      renderQuestion(next, quiz.progress());
+    } else {
+      // 最后一题答完后，更新最后一根蜡烛
+      const progress = quiz.progress();
+      const curIdx = Math.max(0, progress.current - 1);
+      priceState = renderCandleProgress(
+        progress.total,
+        curIdx,
+        quiz.getAnswerHistory(),
+        quiz.getSmartChoiceSequence(),
+        priceState
+      );
+    }
   }
 
   function onComplete({ answers, identity, special, eggs }) {
