@@ -447,7 +447,7 @@ body:not(.app-ready) #app {
 .marquee-track {
   display: flex;
   gap: 12px;
-  animation: marqueeScroll 30s linear infinite;
+  animation: marqueeScroll 15s linear infinite;
   padding: 8px 0;
 }
 .marquee-track:hover {

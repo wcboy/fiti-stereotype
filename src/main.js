@@ -393,10 +393,9 @@ async function init() {
     if (!q) return;
 
     // K 线蜡烛 — 0-based 当前 index
-    // 如果使用过回退功能，K线使用首次答题历史；否则使用当前答题历史
-    const klineHistory = quiz.hasUsedGoBack() ? quiz.getFirstAnswerHistory() : quiz.getAnswerHistory();
+    // 使用首次答题历史（K线冻结已答题，新题继续演化）
     const curIdx = Math.max(0, progress.current - 1);
-    priceState = renderCandleProgress(progress.total, curIdx, klineHistory, quiz.getSmartChoiceSequence(), priceState);
+    priceState = renderCandleProgress(progress.total, curIdx, quiz.getFirstAnswerHistory(), quiz.getSmartChoiceSequence(), priceState);
 
     setText(progressText, `${progress.current} / ${progress.total}`);
     setText(
@@ -523,11 +522,10 @@ async function init() {
       // 最后一题答完后，更新最后一根蜡烛
       const progress = quiz.progress();
       const curIdx = Math.max(0, progress.current - 1);
-      const klineHistory = quiz.hasUsedGoBack() ? quiz.getFirstAnswerHistory() : quiz.getAnswerHistory();
       priceState = renderCandleProgress(
         progress.total,
         curIdx,
-        klineHistory,
+        quiz.getFirstAnswerHistory(),
         quiz.getSmartChoiceSequence(),
         priceState
       );

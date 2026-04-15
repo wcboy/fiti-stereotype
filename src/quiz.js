@@ -130,10 +130,17 @@ export function createQuiz(questions, config, onComplete) {
         value: optionValue
       }
       state.answerHistory.push(answerRecord)
-      // 首次答题时保存历史（用于 K 线）
-      if (!state.hasGoneBack && state.firstAnswerHistory.length < state.answerHistory.length) {
+
+      // 更新首次答题历史：
+      // - 如果这道题还没在首次历史中（新题），添加到首次历史
+      // - 如果这道题已在首次历史中（回退后重答），不更新首次历史（K线冻结）
+      const existingIdx = state.firstAnswerHistory.findIndex(r => r.questionId === q.id)
+      if (existingIdx === -1) {
+        // 新题，添加到首次历史
         state.firstAnswerHistory.push(answerRecord)
       }
+      // 如果是回退后重答，首次历史保持不变
+
       state.mainIdx += 1
       if (state.mainIdx >= orderedMain.length) {
         state.phase = 'done'
