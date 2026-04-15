@@ -121,7 +121,7 @@ function initPreviewCarousel() {
 
 /**
  * 横向滚动图片区域
- * - 从 data/FrontImage/seprated/ 加载图片
+ * - 从 public/images/ 加载图片
  * - 复制两份实现无缝循环滚动
  */
 function initImageMarquee() {
@@ -140,7 +140,7 @@ function initImageMarquee() {
     "slide-8.png",
   ];
 
-  const basePath = "data/FrontImage/seprated/";
+  const basePath = "images/";
 
   // 清空并创建图片元素（复制两份实现无缝循环）
   track.innerHTML = "";
