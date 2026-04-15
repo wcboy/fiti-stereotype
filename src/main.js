@@ -13,6 +13,7 @@ import {
 import { createQuiz } from "./quiz.js";
 import { renderResult } from "./result.js";
 import { renderRadar } from "./chart.js";
+import { uploadResult, getTotalCount } from "./firebaseConfig.js";
 import "./style.css";
 
 // 静态导入数据，Vite 打包 tree-shake
@@ -24,9 +25,8 @@ import cognitive from "../data/interpretations/cognitive.json";
 import behavioral from "../data/interpretations/behavioral.json";
 import social from "../data/interpretations/social.json";
 
-// ============ 本地存储管理 ============
+// ============ 本地存储管理（用户端历史记录）============
 const STORAGE_KEY = "fbti_history";
-const COUNTER_KEY = "fbti_counter";
 
 /**
  * 获取本地历史记录
@@ -41,7 +41,7 @@ function getLocalHistory() {
 }
 
 /**
- * 保存测试记录到本地
+ * 保存测试记录到本地（用户自己查看）
  * @param {Object} record - 测试记录
  */
 function saveToLocalHistory(record) {
@@ -50,38 +50,12 @@ function saveToLocalHistory(record) {
     history.unshift({
       ...record,
       timestamp: Date.now(),
-      device: navigator.userAgent.slice(0, 100),
     });
     // 最多保留20条记录
     if (history.length > 20) history.pop();
     localStorage.setItem(STORAGE_KEY, JSON.stringify(history));
   } catch (e) {
     console.warn("无法保存历史记录:", e);
-  }
-}
-
-/**
- * 获取计数器
- */
-function getCounter() {
-  try {
-    const data = localStorage.getItem(COUNTER_KEY);
-    return data ? parseInt(data, 10) : 0;
-  } catch {
-    return 0;
-  }
-}
-
-/**
- * 增加计数器
- */
-function incrementCounter() {
-  try {
-    const count = getCounter() + 1;
-    localStorage.setItem(COUNTER_KEY, String(count));
-    return count;
-  } catch {
-    return 0;
   }
 }
 
@@ -681,15 +655,22 @@ async function init() {
     lastResult = result;
     lastIdentity = identity;
 
-    // 保存到本地历史记录
+    // 保存到本地历史记录（用户自己查看）
     saveToLocalHistory({
       code: result.primary?.code,
       cn: result.primary?.cn,
       identity: identity,
     });
 
-    // 增加计数器
-    incrementCounter();
+    // 上传到 Firebase（管理员可查看）
+    uploadResult({
+      code: result.primary?.code,
+      cn: result.primary?.cn,
+      title: result.primary?.title,
+      identity: identity,
+      rarity: result.primary?.rarity,
+      mode: result.mode,
+    });
 
     showPage("result");
     requestAnimationFrame(() => {
@@ -813,9 +794,15 @@ async function init() {
 
   // —— 渲染历史记录 ——
   renderHistoryList();
+
+  // 从 Firebase 获取总计数
   const historyCount = byId("history-count");
   if (historyCount) {
-    historyCount.textContent = `共 ${getCounter()} 次`;
+    getTotalCount().then(count => {
+      historyCount.textContent = `共 ${count} 次`;
+    }).catch(() => {
+      historyCount.textContent = "";
+    });
   }
 
   document.body.classList.add("app-ready");
