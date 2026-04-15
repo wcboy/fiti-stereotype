@@ -1,10 +1,10 @@
 # 金融人刻板印象TI (Financial Stereotype Type Indicator)
 
-基于670个金融短视频内容分析的刻板印象人格测试项目。
+基于670个金融调侃类视频内容分析的刻板印象人格测试项目。
 
 ## 项目背景
 
-本项目源自对670个金融短视频的内容分析，提取了：
+本项目源自对670个金融调侃类视频的内容分析，提取了：
 - 14个独立金融梗
 - 38个刻板印象特征
 - 2种核心人格画像
@@ -86,10 +86,10 @@ npm run build
 ## 数据来源
 
 - 原始视频数据：670个金融调侃类视频
-- 分析结果：`/Volumes/LamarHD/FITI/transcripts/analysis/`
 
 ## 致谢
 
 - 原始项目：https://github.com/niuniu-869/fiti
+- SBTI项目：https://github.com/pingfanfan/SBTI
 - 维度分析框架保留原项目设计
 - 人格类型基于真实内容分析重新设计
