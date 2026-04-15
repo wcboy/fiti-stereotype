@@ -369,6 +369,15 @@ body:not(.app-ready) #app {
   font-size: 1rem;
 }
 
+.intro-tagline {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  margin: 1.5rem 0;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
 .intro-note {
   font-family: var(--font-mono);
   font-size: 0.75rem;
