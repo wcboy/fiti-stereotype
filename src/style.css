@@ -257,6 +257,7 @@ body:not(.app-ready) #app {
   position: relative;
 }
 .btn:active { transform: translateY(1px) scale(0.985); }
+.btn[hidden] { display: none !important; }
 
 .btn-primary {
   background: linear-gradient(180deg, var(--gold-bright), var(--gold));
