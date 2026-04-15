@@ -42,8 +42,8 @@ export function renderRadar(
 
   const cx = cssSize / 2;
   const cy = cssSize / 2;
-  // 给 label 预留空间
-  const radius = cssSize / 2 - Math.max(36, cssSize * 0.14);
+  // 给 label 预留更多空间
+  const radius = cssSize / 2 - Math.max(44, cssSize * 0.18);
   const N = dimOrder.length;
   if (N === 0) return;
 
