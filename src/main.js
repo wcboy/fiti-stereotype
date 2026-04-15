@@ -847,14 +847,11 @@ async function init() {
   // —— 渲染历史记录 ——
   renderHistoryList();
 
-  // 从 Firebase 获取总计数
+  // 显示本地历史记录数量
   const historyCount = byId("history-count");
   if (historyCount) {
-    getTotalCount().then(count => {
-      historyCount.textContent = `共 ${count} 次`;
-    }).catch(() => {
-      historyCount.textContent = "";
-    });
+    const localHistory = getLocalHistory();
+    historyCount.textContent = `共 ${localHistory.length} 次`;
   }
 
   document.body.classList.add("app-ready");
