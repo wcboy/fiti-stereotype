@@ -1,0 +1,434 @@
+{
+  "report": {
+    "title": "金融人格测试维度系统分析报告",
+    "date": "2026-04-15",
+    "summary": "对当前9维度系统和15道新题目的覆盖度分析，以及金融特有人格类型建议"
+  },
+  "currentSystem": {
+    "dimensions": {
+      "cognitive": {
+        "model": "认知模型",
+        "dimensions": ["STRATEGY", "LEARN"]
+      },
+      "behavioral": {
+        "model": "行为模型",
+        "dimensions": ["RISK", "DECISION", "EXECUTE", "PATIENCE"]
+      },
+      "social": {
+        "model": "社交模型",
+        "dimensions": ["SOCIAL", "CONFLICT", "BOUNDARY"]
+      }
+    },
+    "definedCount": 9,
+    "usedInQuestions": 12
+  },
+  "analysis": {
+    "dimensionCoverageMatrix": {
+      "STRATEGY": {
+        "name": "策略思维",
+        "questionIds": ["q3", "q9", "q13"],
+        "count": 3,
+        "coverage": "充分",
+        "scenarios": ["面试PUA识别", "关系户识别", "行业衰退识别"]
+      },
+      "LEARN": {
+        "name": "学习力",
+        "questionIds": ["q6", "q13"],
+        "count": 2,
+        "coverage": "适中",
+        "scenarios": ["形式主义mentor", "行业衰退识别"]
+      },
+      "RISK": {
+        "name": "风险偏好",
+        "questionIds": ["q4", "q7", "q15"],
+        "count": 3,
+        "coverage": "充分",
+        "scenarios": ["合规灰色地带", "私下推荐股票", "内幕消息陷阱"]
+      },
+      "DECISION": {
+        "name": "决策风格",
+        "questionIds": ["q4", "q7", "q10", "q15"],
+        "count": 4,
+        "coverage": "过度",
+        "scenarios": ["合规灰色地带", "私下推荐股票", "画饼反杀", "内幕消息陷阱"]
+      },
+      "EXECUTE": {
+        "name": "执行模式",
+        "questionIds": ["q2", "q8", "q14"],
+        "count": 3,
+        "coverage": "充分",
+        "scenarios": ["周五晚加班要求", "全员赋能伪工作", "劝酒文化"]
+      },
+      "PATIENCE": {
+        "name": "耐心程度",
+        "questionIds": ["q6", "q12"],
+        "count": 2,
+        "coverage": "适中",
+        "scenarios": ["形式主义mentor", "家庭压力"]
+      },
+      "SOCIAL": {
+        "name": "社交能量",
+        "questionIds": ["q1", "q3", "q9", "q14"],
+        "count": 4,
+        "coverage": "过度",
+        "scenarios": ["酒会被鄙视", "面试PUA识别", "关系户识别", "劝酒文化"]
+      },
+      "CONFLICT": {
+        "name": "冲突风格",
+        "questionIds": ["q5", "q11"],
+        "count": 2,
+        "coverage": "适中",
+        "scenarios": ["性别歧视反击", "职场霸凌"]
+      },
+      "BOUNDARY": {
+        "name": "边界意识",
+        "questionIds": ["q2", "q11"],
+        "count": 2,
+        "coverage": "适中",
+        "scenarios": ["周五晚加班要求", "职场霸凌"]
+      },
+      "EMOTION": {
+        "name": "情绪感知",
+        "status": "UNDEFINED",
+        "questionIds": ["q1", "q5", "q12"],
+        "count": 3,
+        "coverage": "缺失定义",
+        "note": "在interpretations/social.json中有定义，但dimensions.json中缺失"
+      },
+      "FOCUS": {
+        "name": "聚焦能力",
+        "status": "UNDEFINED",
+        "questionIds": ["q8"],
+        "count": 1,
+        "coverage": "缺失定义",
+        "note": "dimensions.json中完全缺失"
+      },
+      "MEMORY": {
+        "name": "经验记忆",
+        "status": "UNDEFINED",
+        "questionIds": ["q10"],
+        "count": 1,
+        "coverage": "缺失定义",
+        "note": "dimensions.json中完全缺失"
+      }
+    },
+    "coverageSummary": {
+      "overTested": ["DECISION", "SOCIAL"],
+      "adequate": ["STRATEGY", "RISK", "EXECUTE"],
+      "moderate": ["LEARN", "PATIENCE", "CONFLICT", "BOUNDARY"],
+      "undefinedButUsed": ["EMOTION", "FOCUS", "MEMORY"]
+    }
+  },
+  "personalityMatching": {
+    "金融精英表演者": {
+      "coreTraits": ["傲慢自大", "虚伪自恋", "居高临下", "阶层表演"],
+      "signatureBehaviors": ["用专业术语包装私人享乐", "测试羞辱他人", "学历鄙视链"],
+      "languageMarkers": ["专业术语滥用", "中英文混杂", "居高临下的说教语气"],
+      "compatibleDimensions": {
+        "SOCIAL": "H (社交达人)",
+        "CONFLICT": "H (战士)",
+        "BOUNDARY": "L-M (软边界，容易越界他人)",
+        "STRATEGY": "M-H (善于话术和布局)"
+      },
+      "missingDimensions": [
+        {
+          "dimension": "CYNICISM",
+          "reason": "金融精英表演者的核心特质是『伪装』和『表演』，但这不等同于看透本质。需要一个维度来衡量『真诚度』或『表演型人格』"
+        },
+        {
+          "dimension": "AUTHENTICITY",
+          "reason": "当前系统无法区分『真的精英』和『装的精英』"
+        }
+      ],
+      "dimensionPattern": "H-M-H-M-H-M-L-H-H-M-L-L",
+      "matchScore": 0.75,
+      "matchNote": "当前维度可以部分捕捉，但无法区分『真精英』与『装精英』"
+    },
+    "市井内幕解构者": {
+      "coreTraits": ["精明算计", "戏谑调侃", "自我调侃", "地域优越感"],
+      "signatureBehaviors": ["用荒诞案例解构金融神话", "传授野路子生存技巧"],
+      "languageMarkers": ["沪语混合方言", "粗俗与专业词汇混用", "反讽语气"],
+      "compatibleDimensions": {
+        "STRATEGY": "H (看穿话术和陷阱)",
+        "LEARN": "H (识别行业套路)",
+        "RISK": "M (可控风险)",
+        "CONFLICT": "M-H (敢于吐槽)",
+        "SOCIAL": "M (看情况)"
+      },
+      "missingDimensions": [
+        {
+          "dimension": "CYNICISM",
+          "reason": "核心特质是『看透本质』和『圈内cynicism』，当前维度无法直接测量"
+        },
+        {
+          "dimension": "SURVIVAL",
+          "reason": "『野路子生存技巧』需要职场生存智慧维度"
+        }
+      ],
+      "dimensionPattern": "M-M-H-H-L-L-M-H-H-L-M-L",
+      "matchScore": 0.85,
+      "matchNote": "当前维度可以较好捕捉，但缺少『看透本质』的直接测量"
+    }
+  },
+  "newDimensionRecommendations": {
+    "primaryRecommendations": [
+      {
+        "code": "CYNICISM",
+        "name": "圈层洞察",
+        "model": "认知模型",
+        "emoji": "🎭",
+        "description": "看透金融圈本质的能力，识别话术和套路",
+        "levels": {
+          "L": {
+            "name": "天真派",
+            "desc": "相信表面的光鲜，容易被人设和包装迷惑"
+          },
+          "M": {
+            "name": "清醒者",
+            "desc": "能识别基本套路，但偶尔会被高级包装欺骗"
+          },
+          "H": {
+            "name": "解构师",
+            "desc": "一眼看穿本质，对圈内虚伪免疫，善于反讽和解构"
+          }
+        },
+        "careerHint": {
+          "intern": "高圈层洞察让你不会被骗，但也可能让你显得过于愤世嫉俗",
+          "professional": "你的洞察力是双刃剑——看透太多可能让你失去热情"
+        },
+        "rationale": "金融精英表演者和市井内幕解构者的核心差异在于『看透本质』的能力，这是当前维度系统缺失的关键维度"
+      },
+      {
+        "code": "SURVIVAL",
+        "name": "职场生存",
+        "model": "行为模型",
+        "emoji": "🛠️",
+        "description": "在金融圈复杂环境中的生存智慧和应变能力",
+        "levels": {
+          "L": {
+            "name": "天真羔羊",
+            "desc": "不懂职场潜规则，容易被坑、被甩锅、被利用"
+          },
+          "M": {
+            "name": "适应者",
+            "desc": "懂得基本生存技巧，能保护自己但不主动出击"
+          },
+          "H": {
+            "name": "生存大师",
+            "desc": "深谙职场规则，善于借力、避险、化危机为机会"
+          }
+        },
+        "careerHint": {
+          "intern": "高生存智慧让你少踩坑，但也可能让你显得过于圆滑",
+          "professional": "生存智慧让你在复杂环境中如鱼得水，但注意不要变成投机主义"
+        },
+        "rationale": "15道题目中有10道涉及职场生存场景，这是金融圈特有的核心能力"
+      },
+      {
+        "code": "NETWORK",
+        "name": "人脉经营",
+        "model": "社交模型",
+        "emoji": "🕸️",
+        "description": "主动经营和利用人脉资源的能力",
+        "levels": {
+          "L": {
+            "name": "独行侠",
+            "desc": "不主动经营人脉，靠实力说话，但可能错失资源"
+          },
+          "M": {
+            "name": "网络者",
+            "desc": "懂得维护核心关系，在需要时能调动资源"
+          },
+          "H": {
+            "name": "人脉大师",
+            "desc": "将人脉视为资产组合，精准投资和维护，资源变现能力强"
+          }
+        },
+        "careerHint": {
+          "intern": "高人脉经营能力让你快速融入，但也可能让你被质疑『靠关系』",
+          "professional": "你的人脉是你的核心资产，但要注意维护成本和 reciprocity"
+        },
+        "rationale": "q9关系户识别、q1酒会场景都涉及人脉经营，这是金融圈的核心社交能力，与SOCIAL维度不同——SOCIAL是社交能量，NETWORK是社交策略"
+      }
+    ],
+    "secondaryRecommendations": [
+      {
+        "code": "COMPLIANCE",
+        "name": "合规意识",
+        "model": "行为模型",
+        "emoji": "⚖️",
+        "description": "对合规边界的敏感度和坚守程度",
+        "levels": {
+          "L": {
+            "name": "灰色玩家",
+            "desc": "喜欢走捷径，对合规边界模糊，高风险高收益"
+          },
+          "M": {
+            "name": "合规意识者",
+            "desc": "知道红线在哪，不会主动越界但也不当举报者"
+          },
+          "H": {
+            "name": "合规卫士",
+            "desc": "坚守合规底线，宁可错失机会也不越雷池"
+          }
+        },
+        "rationale": "q4合规灰色地带、q7私下推荐股票、q15内幕消息都涉及合规意识，但当前RISK和DECISION维度无法精准捕捉"
+      },
+      {
+        "code": "LEVERAGE",
+        "name": "借力思维",
+        "model": "认知模型",
+        "emoji": "🎯",
+        "description": "善于利用外部资源放大自身价值的能力",
+        "levels": {
+          "L": {
+            "name": "单打独斗者",
+            "desc": "凡事亲力亲为，不善借力，效率上限低"
+          },
+          "M": {
+            "name": "资源整合者",
+            "desc": "懂得在关键时刻借力，但不善于系统化经营"
+          },
+          "H": {
+            "name": "杠杆大师",
+            "desc": "将一切可用资源化为杠杆，最大化投入产出比"
+          }
+        },
+        "rationale": "金融的本质是杠杆，但当前维度无法测量这种思维模式"
+      }
+    ]
+  },
+  "personalityTypeRecommendations": {
+    "newTypes": [
+      {
+        "code": "DECONSTRUCT",
+        "cn": "圈内解构师",
+        "title": "金融圈卧底记者・神话粉碎机",
+        "pattern": "H-H-M-H-M-M-H-M-M-H-M-H",
+        "desc": "你是金融圈的清醒剂，装X界的照妖镜。你深谙行业的每一个潜规则，但从不参与。你的技能是话术拆解，你的武器是黑色幽默。当别人在谈几千万的deal时，你在角落冷笑：PPT又不是一个字没改。你不是不懂，你是看透了。",
+        "coreDimensions": ["STRATEGY-H", "CYNICISM-H", "LEARN-H"],
+        "rationale": "基于『市井内幕解构者』短视频分析，新增CYNICISM维度后可以精准定位"
+      },
+      {
+        "code": "PERFORMER",
+        "cn": "精英表演者",
+        "title": "陆家嘴行走的PPT・精英主义代言人",
+        "pattern": "M-M-H-M-H-H-L-H-H-M-L-M",
+        "desc": "你是金融圈的精英代言人，人形名牌展示架。Loro Piana是你的战袍，Patek Philippe是你的勋章。你的每一句话都自带BGM——中英混搭，术语轰炸。你坚信学历鄙视链是宇宙真理。",
+        "coreDimensions": ["SOCIAL-H", "BOUNDARY-L", "CYNICISM-L", "NETWORK-H"],
+        "rationale": "基于『金融精英表演者』短视频分析，新增CYNICISM维度可以区分真精英与装精英"
+      },
+      {
+        "code": "SURVIVOR",
+        "cn": "职场生存家",
+        "title": "金融圈老油条・不死小强进化版",
+        "pattern": "M-M-M-M-M-M-H-H-H-M-M-H",
+        "desc": "你是金融圈的常青树，历届裁员都幸存的老司机。你不是最优秀的，但你是最懂得生存的。每次组织变革你都安全着陆，每次风波你都能全身而退。你的技能是政治嗅觉，你的武器是灵活应变。",
+        "coreDimensions": ["SURVIVAL-H", "NETWORK-M", "STRATEGY-M"],
+        "rationale": "当前类型中缺少『职场生存』导向的类型"
+      },
+      {
+        "code": "COMPLIANT",
+        "cn": "合规守护者",
+        "title": "金融圈白武士・红线守护神",
+        "pattern": "M-M-L-H-M-M-M-H-M-M-H-H",
+        "desc": "你是金融圈的道德底线，合规部门的定海神针。当别人在寻找灰色地带时，你在划定红线。你不是不懂变通，你是知道某些变通的代价。你的技能是风险识别，你的武器是制度武器。",
+        "coreDimensions": ["COMPLIANCE-H", "RISK-L", "BOUNDARY-H"],
+        "rationale": "当前类型中缺少『合规导向』的类型，但这是金融圈的重要人格"
+      }
+    ],
+    "updatedExistingTypes": [
+      {
+        "code": "SNOOP",
+        "cn": "草根解构师",
+        "update": "新增CYNICISM-H维度后，可以更精准定位此类型",
+        "newPattern": "M-M-H-H-L-L-M-H-H-L-M-H"
+      },
+      {
+        "code": "POSER",
+        "cn": "金融精英表演者",
+        "update": "新增CYNICISM-L维度后，可以区分『真精英』和『装精英』",
+        "newPattern": "H-M-H-M-H-M-L-H-H-M-L-L"
+      }
+    ]
+  },
+  "finalRecommendations": {
+    "immediate": {
+      "priority": "高",
+      "actions": [
+        {
+          "action": "修复维度定义不一致",
+          "detail": "将EMOTION维度添加到dimensions.json，或从questions.json中移除EMOTION引用"
+        },
+        {
+          "action": "定义或移除FOCUS和MEMORY维度",
+          "detail": "这两个维度只在1道题目中使用，考虑合并或移除"
+        },
+        {
+          "action": "平衡维度覆盖",
+          "detail": "DECISION和SOCIAL维度被过度测试(各4次)，考虑调整题目维度分配"
+        }
+      ]
+    },
+    "shortTerm": {
+      "priority": "中",
+      "actions": [
+        {
+          "action": "新增CYNICISM维度",
+          "detail": "这是区分『金融精英表演者』和『市井内幕解构者』的关键维度"
+        },
+        {
+          "action": "新增SURVIVAL维度",
+          "detail": "15道题目中10道涉及职场生存，这是金融圈核心能力"
+        },
+        {
+          "action": "新增NETWORK维度",
+          "detail": "与SOCIAL区分：SOCIAL是社交能量，NETWORK是社交策略"
+        }
+      ]
+    },
+    "longTerm": {
+      "priority": "低",
+      "actions": [
+        {
+          "action": "考虑新增COMPLIANCE维度",
+          "detail": "q4/q7/q15都涉及合规场景，但当前维度无法精准捕捉"
+        },
+        {
+          "action": "考虑新增LEVERAGE维度",
+          "detail": "金融的本质是杠杆，但当前维度无法测量这种思维模式"
+        },
+        {
+          "action": "扩展人格类型",
+          "detail": "新增圈内解构师、精英表演者、职场生存家、合规守护者等类型"
+        }
+      ]
+    }
+  },
+  "dimensionQuestionMatrix": {
+    "headers": ["题目ID", "场景", "维度1", "维度2", "新增维度建议"],
+    "rows": [
+      ["q1", "酒会被鄙视反杀", "SOCIAL", "EMOTION(未定义)", "CYNICISM"],
+      ["q2", "周五晚加班要求", "BOUNDARY", "EXECUTE", "SURVIVAL"],
+      ["q3", "面试PUA识别", "SOCIAL", "STRATEGY", "CYNICISM"],
+      ["q4", "合规灰色地带", "RISK", "DECISION", "COMPLIANCE"],
+      ["q5", "性别歧视反击", "CONFLICT", "EMOTION(未定义)", "SURVIVAL"],
+      ["q6", "形式主义mentor", "PATIENCE", "LEARN", "SURVIVAL"],
+      ["q7", "私下推荐股票", "DECISION", "RISK", "COMPLIANCE"],
+      ["q8", "全员赋能伪工作", "FOCUS(未定义)", "EXECUTE", "SURVIVAL"],
+      ["q9", "关系户识别", "SOCIAL", "STRATEGY", "NETWORK"],
+      ["q10", "画饼反杀", "MEMORY(未定义)", "DECISION", "SURVIVAL"],
+      ["q11", "职场霸凌", "CONFLICT", "BOUNDARY", "SURVIVAL"],
+      ["q12", "家庭压力", "EMOTION(未定义)", "PATIENCE", "-"],
+      ["q13", "行业衰退识别", "STRATEGY", "LEARN", "-"],
+      ["q14", "劝酒文化", "SOCIAL", "EXECUTE", "SURVIVAL"],
+      ["q15", "内幕消息陷阱", "DECISION", "RISK", "COMPLIANCE"]
+    ]
+  },
+  "conclusion": {
+    "currentSystemAdequacy": "当前9维度系统可以部分捕捉金融人格特征，但存在以下问题：1) 3个维度(EMOTION/FOCUS/MEMORY)在题目中使用但未定义；2) 缺少区分『看透本质』能力的关键维度(CYNICISM)；3) 缺少『职场生存智慧』维度(SURVIVAL)；4) 缺少区分『社交能量』与『社交策略』的维度(NETWORK)",
+    "proposedDimensionCount": 12,
+    "proposedDimensions": ["STRATEGY", "LEARN", "RISK", "DECISION", "EXECUTE", "PATIENCE", "SOCIAL", "CONFLICT", "BOUNDARY", "CYNICISM", "SURVIVAL", "NETWORK"],
+    "expectedImprovement": "新增3个维度后，可以：1) 精准区分『金融精英表演者』和『市井内幕解构者』；2) 捕捉金融圈特有的职场生存能力；3) 区分社交能量与社交策略；4) 更好地覆盖15道题目的测量意图"
+  }
+}

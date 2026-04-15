@@ -2,7 +2,7 @@
   "standard": [
     {
       "code": "POSER",
-      "pattern": "H-M-H-M-H-M-L-H-H-M-L-L",
+      "pattern": "M-M-L-M-H-H-L-M-H-M-L-H",
       "cn": "金融精英表演者",
       "title": "陆家嘴行走的PPT・精英主义代言人",
       "intro": "西装是我的铠甲，Bloomberg是我的武器，你配和我说话吗？",
@@ -16,7 +16,7 @@
     },
     {
       "code": "SNOOP",
-      "pattern": "M-M-H-H-L-L-M-H-H-L-M-L",
+      "pattern": "M-M-H-M-L-L-M-H-L-H-H-L",
       "cn": "草根解构师",
       "title": "金融圈卧底记者・神话粉碎机",
       "intro": "别装了，我看过你们穿袜子的样子。",
@@ -30,7 +30,7 @@
     },
     {
       "code": "CRAM",
-      "pattern": "H-H-M-M-H-H-L-M-L-M-L-L",
+      "pattern": "H-H-M-M-H-H-H-M-L-M-L-L",
       "cn": "证书收割机",
       "title": "考证界永动机・薛定谔的含金量",
       "intro": "CPA、CFA、FRM、司考，我现在就差一个保代。",
@@ -44,7 +44,7 @@
     },
     {
       "code": "NEPOT",
-      "pattern": "L-L-M-M-M-H-H-H-H-M-L-L",
+      "pattern": "L-L-M-M-M-H-H-H-H-M-L-H",
       "cn": "关系户收割者",
       "title": "资源变现大师・背景即正义",
       "intro": "我的简历没有亮点，但我的爸爸有银行。",
@@ -58,7 +58,7 @@
     },
     {
       "code": "TOXIC",
-      "pattern": "H-M-M-H-H-M-M-M-H-M-M-L",
+      "pattern": "H-M-M-H-H-M-M-M-H-H-M-M",
       "cn": "面试PUA大师",
       "title": "压力测试艺术家・候选人的噩梦",
       "intro": "你为什么要用这个字体？你觉得这专业吗？",
@@ -72,7 +72,7 @@
     },
     {
       "code": "GRINDER",
-      "pattern": "H-M-H-M-H-M-M-L-M-M-M-L",
+      "pattern": "M-M-M-M-M-H-M-M-L-M-L-L",
       "cn": "加班战神",
       "title": "不眠不休永动机・凌晨四点陆家嘴",
       "intro": "周末是什么？能吃吗？我还有三个IPO要赶。",
@@ -86,7 +86,7 @@
     },
     {
       "code": "QUANT",
-      "pattern": "H-H-H-H-M-M-M-L-L-M-L-L",
+      "pattern": "H-H-H-H-H-M-M-L-L-M-L-L",
       "cn": "金融思维入侵者",
       "title": "万物皆可估值・恋爱ROI分析师",
       "intro": "这段关系的NPV是负的，建议及时止损。",
@@ -100,7 +100,7 @@
     },
     {
       "code": "BEAN",
-      "pattern": "H-H-L-M-H-L-M-L-L-M-L-L",
+      "pattern": "M-M-L-L-M-M-M-L-L-M-L-L",
       "cn": "财务背锅侠",
       "title": "提篮桥预备役・会计两千五传奇",
       "intro": "借贷不平，天理不容；账面不平，牢底坐穿。",
@@ -114,7 +114,7 @@
     },
     {
       "code": "BUTTERFLY",
-      "pattern": "L-M-L-M-L-M-H-H-H-H-M-H",
+      "pattern": "L-M-L-M-M-M-H-H-H-H-M-H",
       "cn": "社交收割机",
       "title": "人脉资源兑换商・咖啡局专业户",
       "intro": "有空喝杯咖啡吗？我认识一个很厉害的人。",
@@ -128,7 +128,7 @@
     },
     {
       "code": "HOPPER",
-      "pattern": "M-M-H-M-H-H-M-L-M-H-L-L",
+      "pattern": "M-M-H-M-H-M-M-H-M-M-M-L",
       "cn": "跳槽套利者",
       "title": "简历迭代专家・及时止损教科书",
       "intro": "这公司不行了，我准备了下家的offer。",
@@ -142,7 +142,7 @@
     },
     {
       "code": "FLEX",
-      "pattern": "L-L-M-H-L-M-H-H-M-M-L-M",
+      "pattern": "L-M-L-H-M-M-H-H-M-M-L-M",
       "cn": "炫富表演艺术家",
       "title": "朋友圈富豪・私人飞机打卡员",
       "intro": "今天又是一个无聊的私人飞机下午茶。",
@@ -156,7 +156,7 @@
     },
     {
       "code": "SLACKER",
-      "pattern": "L-M-L-M-L-L-M-M-L-M-H-H",
+      "pattern": "L-M-M-M-L-L-M-M-L-M-H-H",
       "cn": "躺平哲学家",
       "title": "国企养老专业户・准点下班祖师爷",
       "intro": "工作是一种修行，摸鱼是一门艺术。",
@@ -170,7 +170,7 @@
     },
     {
       "code": "FOMO",
-      "pattern": "H-H-M-M-H-H-M-L-L-H-M-L",
+      "pattern": "H-H-M-M-H-H-M-L-L-M-L-M",
       "cn": "焦虑加速器",
       "title": "FOMO综合症患者・内卷永动机",
       "intro": "别人都拿到了，我怎么办？我是不是要被淘汰了？",
@@ -184,7 +184,7 @@
     },
     {
       "code": "PUFFER",
-      "pattern": "M-M-H-H-M-H-M-L-M-L-H-L",
+      "pattern": "M-M-L-M-H-M-M-M-M-M-L-M",
       "cn": "简历整容师",
       "title": "百万调研制造机・注水艺术家",
       "intro": "这份问卷星调研，我可以写成百万用户研究。",
@@ -198,7 +198,7 @@
     },
     {
       "code": "ROO",
-      "pattern": "M-L-M-M-L-M-M-H-H-M-L-H",
+      "pattern": "L-L-M-M-M-M-M-H-M-M-L-M",
       "cn": "海归水学历代言人",
       "title": "QS前50守门员・袋鼠战神",
       "intro": "我在澳洲待了两年，袋鼠是我的精神导师。",
@@ -212,7 +212,7 @@
     },
     {
       "code": "SNEAK",
-      "pattern": "M-M-H-H-M-L-M-H-M-L-H-L",
+      "pattern": "M-M-H-M-M-M-M-H-M-M-M-L",
       "cn": "职场老六",
       "title": "潜规则猎人・制度漏洞收割机",
       "intro": "规则是给别人定的，我是规则之外的变量。",
@@ -228,6 +228,7 @@
   "special": [
     {
       "code": "NPC",
+      "pattern": "M-M-M-M-M-M-M-M-M-M-M-M",
       "cn": "金融路人甲",
       "title": "市场背景板・NPC级存在",
       "intro": "你的画像太复杂，系统无法归类。",
@@ -242,6 +243,7 @@
     },
     {
       "code": "CHOSEN",
+      "pattern": "L-L-M-L-M-M-M-H-M-M-H-H",
       "cn": "天选关系户",
       "title": "金融宇宙终极赢家",
       "intro": "上班是一种体验，工作是一种社交，我的人生不需要KPI。",
@@ -256,6 +258,7 @@
     },
     {
       "code": "UNCERT",
+      "pattern": "M-H-H-M-L-H-M-M-L-M-L-L",
       "cn": "证书无效论信徒",
       "title": "反证书主义先驱・爹妈快乐证收藏家",
       "intro": "考了六个证，还是找不到工作，证书都是骗人的。",

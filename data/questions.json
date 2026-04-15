@@ -14,392 +14,249 @@
   "main": [
     {
       "id": "q1",
-      "dims": ["SOCIAL", "EMOTION"],
+      "dims": ["SOCIAL", "CYNICISM"],
       "scenario": "negative",
       "smartChoice": 3,
-      "smartNote": "主动出击建立连接，而非逃避或装X",
-      "text": "你走进一场陆家嘴高端金融酒会，所有人都在谈「几个亿的deal」「美元基金」「Pre-IPO轮」。你的第一反应？",
+      "smartNote": "用专业反杀，不卑不亢，展现圈层洞察",
+      "text": "酒会上，一个穿Loro Piana的「大佬」听说你是做量化的，立刻用一种看实习生的语气说：「量化啊，那不是写代码的吗？」旁边几个做PE的已经开始憋笑了。",
       "options": [
-        { "label": "默默退到角落，假装在看手机，等可以走的时机", "value": 1 },
-        { "label": "找机会插话，「我也参与过一个类似的项目……」", "value": 2 },
-        { "label": "主动开启话题，「你们怎么看最近这波Pre-IPO的估值逻辑？」", "value": 3 }
+        { "label": "尴尬笑笑，「对对，就是写代码的」", "value": 1 },
+        { "label": "转移话题，「您是做什么方向的？」", "value": 2 },
+        { "label": "「量化确实要写代码，不过您知道文艺复兴的年化收益是多少吗？」", "value": 3 }
       ]
     },
     {
       "id": "q2",
-      "dims": ["DECISION", "BOUNDARY"],
+      "dims": ["BOUNDARY", "SURVIVAL"],
       "scenario": "negative",
-      "smartChoice": 2,
-      "smartNote": "冷静应对，不被情绪带偏，展现专业性",
-      "text": "面试官问你：「你为什么觉得你配得上这个岗位？」语气带着明显的不屑。你会？",
+      "smartChoice": 3,
+      "smartNote": "明确边界，展现职场生存智慧",
+      "text": "周五晚上11点，老板发来微信：「这版PPT差点意思，周一晨会要用，辛苦一下。」你刚关上电脑准备回家过周末。",
       "options": [
-        { "label": "愣住，然后开始怀疑自己是不是真的不行", "value": 1 },
-        { "label": "保持冷静，「我想了解您具体关注哪些方面？我可以针对性说明」", "value": 2 },
-        { "label": "心里冷笑：这公司不值得，但嘴上说，「确实可能不太合适」，然后结束面试", "value": 3 }
+        { "label": "「好的收到」，默默打开电脑重做", "value": 1 },
+        { "label": "「好的，我周日上午发给您」，然后周日晚上才开始做", "value": 2 },
+        { "label": "「这周刚做过三个版本，能否周一早上对齐一下具体要改哪？」", "value": 3 }
       ]
     },
     {
       "id": "q3",
-      "dims": ["STRATEGY", "LEARN"],
+      "dims": ["CYNICISM", "STRATEGY"],
       "scenario": "negative",
       "smartChoice": 3,
-      "smartNote": "识别陷阱，散户能拿到的内幕都是接盘信号",
-      "text": "同事告诉你一个「内部消息」：某公司下周要发重大利好，现在布局来得及。你的反应？",
+      "smartNote": "识破PUA话术，保持清醒",
+      "text": "面试时，HR说：「我们这里对标的是高盛、中金，所以起薪12k，但平台价值是无价的。而且我们是扁平化管理，你进去就是核心团队。」你本科985，硕士QS前50。",
       "options": [
-        { "label": "心动，问「靠谱吗？要不我也上一点？」", "value": 1 },
-        { "label": "听完当八卦，转头就忘", "value": 2 },
-        { "label": "「散户能拿到的内部消息，99%是别人放出来让你接盘的」", "value": 3 }
+        { "label": "「谢谢机会，我愿意从基层做起」", "value": 1 },
+        { "label": "心里骂娘，面上点头，「我考虑一下」", "value": 2 },
+        { "label": "「对标高盛的话，高盛第一年大概是多少来着？」", "value": 3 }
       ]
     },
     {
       "id": "q4",
-      "dims": ["EMOTION", "SOCIAL"],
+      "dims": ["RISK", "SURVIVAL"],
       "scenario": "negative",
-      "smartChoice": 2,
-      "smartNote": "不站队不评价，保持职场安全距离",
-      "text": "你领导的朋友圈日常：早八健身房、中午米其林、晚十还在加班、周末高尔夫、配文全是「赋能」「闭环」「抓手」。你的真实想法？",
+      "smartChoice": 3,
+      "smartNote": "识别合规风险，展现职场生存智慧",
+      "text": "领导私下暗示：「这个项目走正规流程至少两个月，但客户下周就要资金。你懂得，有时候要灵活一点。」他拍了拍你的肩膀，「年轻人机会难得。」",
       "options": [
-        { "label": "很厉害，这种人脉和精力确实不一般", "value": 1 },
-        { "label": "不知道说什么，默默划过", "value": 2 },
-        { "label": "截图发给朋友，「你看这个人又开始了」，然后评论区点赞", "value": 3 }
+        { "label": "「明白，我来想办法」，开始研究怎么绕过流程", "value": 1 },
+        { "label": "装傻，「领导您看有什么正规方式可以加速？」", "value": 2 },
+        { "label": "「这个我确实不太懂，要不我咨询一下合规部？」", "value": 3 }
       ]
     },
     {
       "id": "q5",
-      "dims": ["FOCUS", "PATIENCE"],
+      "dims": ["CONFLICT", "SURVIVAL"],
       "scenario": "negative",
       "smartChoice": 3,
-      "smartNote": "立刻行动，执行力是赚钱的第一要素",
-      "text": "CPA报名费交了，教材买了，今天打开学习进度——你还停在第一章第3节，和一个月前一模一样。",
+      "smartNote": "反击性别歧视，展现职场生存智慧",
+      "text": "开会上，某副总当着二十多人的面说：「女同志就是细心，所以Excel这块还是找女同志做比较好，逻辑分析这块男同志来。」你是女的，数据分析能力全组最强。",
       "options": [
-        { "label": "关掉，先刷完这集剧再说", "value": 1 },
-        { "label": "定了下周计划，希望能执行", "value": 2 },
-        { "label": "立刻列学习表，今晚必须看完两章", "value": 3 }
+        { "label": "低头看手机，假装没听见", "value": 1 },
+        { "label": "会后找他私下沟通，表达不舒服", "value": 2 },
+        { "label": "「副总，我上次的模型预测准确率92%，要不给您过一下？」", "value": 3 }
       ]
     },
     {
       "id": "q6",
-      "dims": ["MEMORY", "EXECUTE"],
+      "dims": ["PATIENCE", "LEARN"],
       "scenario": "negative",
       "smartChoice": 3,
-      "smartNote": "复盘改进，从失败中提取价值",
-      "text": "这季度你投了100份简历，回复率10%，终面挂了6家。现在是周五晚上10点。",
+      "smartNote": "识破形式主义，主动推进学习",
+      "text": "入职三个月，你的mentor从不带你做业务，只让你「多看看过往材料」「整理一下会议纪要」「帮我订一下下午茶」。你问什么时候能上手项目，他说「你还没ready」。",
       "options": [
-        { "label": "打游戏，周末再说", "value": 1 },
-        { "label": "点外卖刷短视频，缓解一下", "value": 2 },
-        { "label": "开Excel复盘每家挂在哪一轮，明天针对性准备", "value": 3 }
+        { "label": "继续等，「可能确实还不够格」", "value": 1 },
+        { "label": "自己找事做，偷偷观察别人怎么做", "value": 2 },
+        { "label": "「三个月了，要不您给个具体checklist，达标我就上手？」", "value": 3 }
       ]
     },
     {
       "id": "q7",
-      "dims": ["BOUNDARY", "DECISION"],
+      "dims": ["DECISION", "RISK"],
       "scenario": "negative",
       "smartChoice": 3,
-      "smartNote": "获取关键信息，做出理性判断",
-      "text": "HR问：「你能接受多大的加班强度？」你内心OS：这公司JD上写着「弹性工作」。",
+      "smartNote": "识别法律风险，果断拒绝",
+      "text": "客户暗示：「我知道你们按规定不能私下推荐股票，但咱俩这关系...」然后发来一个股票代码，「就当帮老哥参考参考。」",
       "options": [
-        { "label": "「可以接受，年轻人多学习没问题」", "value": 1 },
-        { "label": "「看具体项目周期，高峰期可以，常态化可能有困难」", "value": 2 },
-        { "label": "「想了解一下团队的平均下班时间，方便我评估」", "value": 3 }
+        { "label": "「我私下给您看看」，下班后偷偷研究", "value": 1 },
+        { "label": "「这块我确实不太熟，怕耽误您」", "value": 2 },
+        { "label": "「这块必须走合规，要不我帮您约一下投研部门？」", "value": 3 }
       ]
     },
     {
       "id": "q8",
-      "dims": ["LEARN", "STRATEGY"],
-      "scenario": "neutral",
+      "dims": ["EXECUTE", "CYNICISM"],
+      "scenario": "negative",
       "smartChoice": 3,
-      "smartNote": "看透数据本质，不被平均数误导",
-      "text": "公司群里转发一条行业报告：《2025年金融行业薪酬报告：平均年薪XX万》。评论区一片「被平均了」。你的反应？",
+      "smartNote": "识别伪工作，聚焦产出",
+      "text": "公司推行「全员赋能」，每周要写OKR、填周报、开复盘会、做360度评估、参加读书分享会。你实际工作量没减，还要多花8小时在这些「赋能」上。",
       "options": [
-        { "label": "转发给朋友，「你看，金融还是赚钱」", "value": 1 },
-        { "label": "看看就好，不参与讨论", "value": 2 },
-        { "label": "「平均数意义不大，中位数和头部占比才是关键」", "value": 3 }
+        { "label": "认真对待，每样都好好做", "value": 1 },
+        { "label": "能糊弄就糊弄，复制粘贴", "value": 2 },
+        { "label": "找leader对齐：「哪些是必须认真做的？哪些可以简化？」", "value": 3 }
       ]
     },
     {
       "id": "q9",
-      "dims": ["RISK", "CONFLICT"],
+      "dims": ["NETWORK", "CYNICISM"],
       "scenario": "negative",
       "smartChoice": 3,
-      "smartNote": "坚守底线，合规风险绝不碰",
-      "text": "直属领导让你在一份明显有问题的合同上签字，「先签了，后面再改」。你知道出了事你是第一责任人。",
+      "smartNote": "识别功利社交，保持清醒",
+      "text": "同事A跟你关系很好，经常一起吃饭吐槽。后来你发现，她只跟「有用的人」吃饭——一个实习生转正后，她立刻从爱答不理变成天天约饭。你刚被分配到一个核心项目。",
       "options": [
-        { "label": "签，领导说的应该没问题", "value": 1 },
-        { "label": "「我需要再仔细看一下条款」然后拖延", "value": 2 },
-        { "label": "直接拒绝，「这个条款有合规风险，我不能签」", "value": 3 }
+        { "label": "继续跟她做好朋友，可能我想多了", "value": 1 },
+        { "label": "疏远她，但也维持表面关系", "value": 2 },
+        { "label": "保持工作关系，但不再分享私人信息", "value": 3 }
       ]
     },
     {
       "id": "q10",
-      "dims": ["BOUNDARY", "EMOTION"],
+      "dims": ["STRATEGY", "SURVIVAL"],
       "scenario": "negative",
       "smartChoice": 3,
-      "smartNote": "用问题反击，让对方自己露馅",
-      "text": "饭局上某「资深投资人」开始对你的职业规划指指点点：「你们年轻人就是格局太小……」他管的钱可能还不如你年终奖多。",
+      "smartNote": "记住教训，不被同一块石头绊倒",
+      "text": "前领导承诺过「这个项目做完给你调岗」，你加班三个月做完后，他说「再做一个吧，这个更有说服力」。这次新领导又画了类似的饼。",
       "options": [
-        { "label": "微笑点头，「您说得对，我确实需要学习」", "value": 1 },
-        { "label": "转移话题，不接茬", "value": 2 },
-        { "label": "「您当年是踩中了哪个风口？现在还可以复制吗？」", "value": 3 }
+        { "label": "这次是真的，好好干", "value": 1 },
+        { "label": "边干边观望，不行就找机会", "value": 2 },
+        { "label": "「能否先把调岗的具体时间和流程确定下来？」", "value": 3 }
       ]
     },
     {
       "id": "q11",
-      "dims": ["EMOTION", "FOCUS"],
+      "dims": ["CONFLICT", "SURVIVAL"],
       "scenario": "negative",
       "smartChoice": 3,
-      "smartNote": "用专业反击，用逻辑说话",
-      "text": "你熬了三个通宵做的估值模型，在会议上被客户当众说「这也叫专业？Excel都不会用吗」。你的反应？",
+      "smartNote": "抵制职场霸凌，展现生存智慧",
+      "text": "组里有个「老人」，资历老但不干活。每次活分下来他都「指导」你：「你这样做不对」「我当年怎么怎么」。出了问题他说「我早就说了」，功劳他领。",
       "options": [
-        { "label": "当场憋住，回去偷偷崩溃", "value": 1 },
-        { "label": "保持微笑，心里记下这个客户以后不接", "value": 2 },
-        { "label": "当场复盘模型逻辑，条理清晰地说明为什么这么做", "value": 3 }
+        { "label": "忍了，他是前辈", "value": 1 },
+        { "label": "阳奉阴违，面上听着", "value": 2 },
+        { "label": "每次都邮件抄送leader：「根据XX建议，调整如下」", "value": 3 }
       ]
     },
     {
       "id": "q12",
-      "dims": ["MEMORY", "LEARN"],
+      "dims": ["BOUNDARY", "PATIENCE"],
       "scenario": "negative",
       "smartChoice": 3,
-      "smartNote": "主动确认，避免信息不对称",
-      "text": "面试官问你：「你对这个岗位的理解是什么？」你发现JD和实际工作内容明显对不上。",
+      "smartNote": "设立边界，不被家庭绑架",
+      "text": "大年初二，家族聚餐。七大姑八大姨围攻：「金融那么赚钱，怎么还没买房？」「你看谁谁谁孩子都俩了」「读书读傻了吧，不如早点嫁人/娶媳妇」。你妈在旁边附和点头。",
       "options": [
-        { "label": "按JD说的，加上一些包装", "value": 1 },
-        { "label": "说一个大概，希望不要太偏", "value": 2 },
-        { "label": "「根据我的了解，这个岗位实际会更偏向XX，您能帮我确认一下吗？」", "value": 3 }
+        { "label": "尴尬笑笑，「快了快了」", "value": 1 },
+        { "label": "找借口离席，躲去刷手机", "value": 2 },
+        { "label": "「今年行情不好，我们部门裁了40%，我保住工作就不错了」", "value": 3 }
       ]
     },
     {
       "id": "q13",
-      "dims": ["EXECUTE", "FOCUS"],
+      "dims": ["STRATEGY", "LEARN"],
       "scenario": "negative",
       "smartChoice": 3,
-      "smartNote": "高效沟通，精准解决问题",
-      "text": "周五晚11点，老板发来：「这版PPT整体差点意思，周一上午要用，你周末再改一版。」这是第18版。",
+      "smartNote": "识别行业衰退，及时转型",
+      "text": "你所在的业务线连续三年裁人，领导离职率80%，但公司每年都说「明年就好了」。猎头给你推了一个新兴赛道的offer，薪资持平但前景不明。",
       "options": [
-        { "label": "先睡再说，周末再搞", "value": 1 },
-        { "label": "刷会手机缓解一下，凌晨1点再开始", "value": 2 },
-        { "label": "立刻问清楚具体要改哪些点，一小时内出初稿", "value": 3 }
+        { "label": "留守，「万一明年真好了呢」", "value": 1 },
+        { "label": "先不跳，但开始准备简历和面试", "value": 2 },
+        { "label": "深入调研新兴赛道，找行内人聊，再决定", "value": 3 }
       ]
     },
     {
       "id": "q14",
-      "dims": ["RISK", "STRATEGY"],
-      "scenario": "positive",
+      "dims": ["BOUNDARY", "SURVIVAL"],
+      "scenario": "negative",
       "smartChoice": 3,
-      "smartNote": "尽职调查，用数据支撑决策",
-      "text": "猎头给你推了一个新机会：薪资涨幅30%，但公司知名度下降，团队也不稳定。",
+      "smartNote": "拒绝劝酒文化，保护自己",
+      "text": "客户答谢宴，对方领导说：「小姑娘不喝就是不给面子。」你部门领导在旁边笑：「我们XX最能喝了，来来来。」你其实酒精过敏。",
       "options": [
-        { "label": "薪资涨幅30%，果断考虑", "value": 1 },
-        { "label": "犹豫，需要更多信息", "value": 2 },
-        { "label": "先调研公司背景、离职率、业务前景，再决定要不要聊", "value": 3 }
+        { "label": "硬着头皮喝一口", "value": 1 },
+        { "label": "「我以茶代酒」，然后被一直劝", "value": 2 },
+        { "label": "「医生说酒精过敏会休克，要不我给各位倒酒？」", "value": 3 }
       ]
     },
     {
       "id": "q15",
-      "dims": ["CONFLICT", "EXECUTE"],
-      "scenario": "negative",
+      "dims": ["RISK", "CYNICISM"],
+      "scenario": "neutral",
       "smartChoice": 3,
-      "smartNote": "质疑合规性，保护自己也保护公司",
-      "text": "部门群里领导发：「不管任何手段——路演、请客、送数据，全给我上。派点冲不上去的节后优化。」群里一片「收到」。",
+      "smartNote": "识别内幕陷阱，保持清醒",
+      "text": "内幕消息：某公司下周要公告重大利好。你朋友说：「放心，这消息我舅舅亲耳听董事长说的，绝对稳。投入多少，翻倍多少。」",
       "options": [
-        { "label": "跟着回「收到」，然后偷偷看招聘App", "value": 1 },
-        { "label": "回「收到」，按常规方式做", "value": 2 },
-        { "label": "私下问领导：「这个做法合规部门确认过了吗？」", "value": 3 }
+        { "label": "跟着买一点，「反正是朋友舅舅的消息」", "value": 1 },
+        { "label": "不参与，但也不举报", "value": 2 },
+        { "label": "「内幕交易是刑事犯罪，而且查得很严，我劝你也别碰」", "value": 3 }
       ]
     },
     {
       "id": "q16",
-      "dims": ["BOUNDARY", "PATIENCE"],
+      "dims": ["DECISION", "STRATEGY"],
       "scenario": "negative",
       "smartChoice": 3,
-      "smartNote": "设立边界，维护工作生活平衡",
-      "text": "大年初二下午，团队群发：「今晚8点紧急电话会，讨论最新监管文件。」你正在陪家人。",
+      "smartNote": "果断决策，战略布局",
+      "text": "你跟踪了半年的标的出现重大利空，股价已经跌了20%。你的模型显示还会再跌15%，但现在是「抄底」的好时机。账户里有你一年的奖金。",
       "options": [
-        { "label": "立刻放下手里的活准备参会", "value": 1 },
-        { "label": "参会但静音，一边陪家人一边听", "value": 2 },
-        { "label": "回复：「家里有安排了，请问是否必须参加？会后我可以看纪要」", "value": 3 }
+        { "label": "继续观望，「万一反弹呢？」", "value": 1 },
+        { "label": "止损卖出，先保住本金", "value": 2 },
+        { "label": "分批建仓，设置严格的止损线，这是机会", "value": 3 }
       ]
     },
     {
       "id": "q17",
-      "dims": ["FOCUS", "LEARN"],
+      "dims": ["EXECUTE", "PATIENCE"],
       "scenario": "negative",
       "smartChoice": 3,
-      "smartNote": "果断止损，避免继续浪费时间",
-      "text": "你点开一篇《重磅！金融行业未来10年黄金赛道》，读完发现全是「预计」「可能」「值得关注」这类车轱辘话。",
+      "smartNote": "执行与耐心平衡，长期主义",
+      "text": "你负责的一个投后管理项目，被投企业连续两个季度业绩下滑。创始人说「正在转型」，但转型的方向你看不太懂。你的LP开始问问题了。",
       "options": [
-        { "label": "万一是真的呢？发给朋友看看", "value": 1 },
-        { "label": "划走，浪费时间", "value": 2 },
-        { "label": "拉黑这个号，以后再也不看了", "value": 3 }
+        { "label": "相信创始人，给时间转型", "value": 1 },
+        { "label": "要求创始人每两周汇报进展", "value": 2 },
+        { "label": "立刻安排实地调研，找上下游验证真实情况，再决定是否止损", "value": 3 }
       ]
     },
     {
       "id": "q18",
-      "dims": ["RISK", "DECISION"],
-      "scenario": "neutral",
+      "dims": ["SOCIAL", "CONFLICT"],
+      "scenario": "negative",
       "smartChoice": 3,
-      "smartNote": "全面评估，不被单一因素驱动",
-      "text": "你在这个岗位干了两年，发现同届跳槽的同学薪资已经比你高50%。但你现在的工作稳定、领导也不错。",
+      "smartNote": "社交中处理冲突，展现情商",
+      "text": "行业峰会上，你在茶歇时遇到一位大佬。刚聊了两句，旁边来了个人直接打断：「王总，借一步说话。」把你晾在一边。王总看了你一眼。",
       "options": [
-        { "label": "立刻开始准备简历，必须追上", "value": 1 },
-        { "label": "有点焦虑，但不想动", "value": 2 },
-        { "label": "综合评估：成长空间、人脉资源、未来3年路径，再决定要不要动", "value": 3 }
+        { "label": "默默走开，找别的茶点", "value": 1 },
+        { "label": "假装看手机，等他们聊完", "value": 2 },
+        { "label": "「王总您先忙，我加您微信，改天请教」，主动递名片", "value": 3 }
       ]
     },
     {
       "id": "q19",
-      "dims": ["EMOTION", "DECISION"],
+      "dims": ["NETWORK", "SURVIVAL"],
       "scenario": "negative",
       "smartChoice": 3,
-      "smartNote": "公开维权，建立边界",
-      "text": "你在朋友圈发了一条行业观点，三天后发现同事转发了一个类似观点，还被领导表扬「思路清晰」。他没署你的名。",
+      "smartNote": "人脉经营与职场生存结合",
+      "text": "公司架构调整，你的直属领导被调走了。新来的领导带了三个人，明显是要换血。你之前跟老领导关系很好，但现在老领导去了边缘部门。",
       "options": [
-        { "label": "算了，不值得为这事撕", "value": 1 },
-        { "label": "私聊他，「下次记得提一下来源哈」", "value": 2 },
-        { "label": "在群里@他：「哈哈，这个观点和我前几天发的好像」", "value": 3 }
-      ]
-    },
-    {
-      "id": "q20",
-      "dims": ["CONFLICT", "SOCIAL"],
-      "scenario": "negative",
-      "smartChoice": 3,
-      "smartNote": "化解冲突，转化为建设性对话",
-      "text": "部门来了一个名校海归，第一周就在群里发：「我觉得我们之前的分析框架太传统了……」言下之意全是问题。",
-      "options": [
-        { "label": "不说话，看看大家怎么反应", "value": 1 },
-        { "label": "私聊老同事吐槽一下", "value": 2 },
-        { "label": "群里回：「欢迎分享你的框架，我们可以一起讨论优化」", "value": 3 }
-      ]
-    },
-    {
-      "id": "q21",
-      "dims": ["MEMORY", "STRATEGY"],
-      "scenario": "negative",
-      "smartChoice": 3,
-      "smartNote": "反问澄清，掌握主动权",
-      "text": "面试官问：「你觉得金融行业最大的问题是什么？」这是一个开放性的坑。",
-      "options": [
-        { "label": "说一些大而空的行业共性问题", "value": 1 },
-        { "label": "从自己经历出发，说一些具体问题", "value": 2 },
-        { "label": "反问：「您更关注哪个层面？宏观周期、监管环境、还是业务模式？」然后针对性展开", "value": 3 }
-      ]
-    },
-    {
-      "id": "q22",
-      "dims": ["RISK", "DECISION"],
-      "scenario": "negative",
-      "smartChoice": 3,
-      "smartNote": "识别风险，不接飞刀",
-      "text": "你的同学在某私募工作，告诉你他们自营盘最近回撤了30%，问你要不要趁低跟投。",
-      "options": [
-        { "label": "他内行，跟着上一点", "value": 1 },
-        { "label": "先看看历史业绩再说", "value": 2 },
-        { "label": "「你都亏30%了，我跟投不是送钱吗？」", "value": 3 }
-      ]
-    },
-    {
-      "id": "q23",
-      "dims": ["RISK", "BOUNDARY"],
-      "scenario": "negative",
-      "smartChoice": 3,
-      "smartNote": "坚守底线，不参与造假",
-      "text": "公司让你帮忙做一份简历，「是老板的朋友小孩，想去另一家公司，你帮忙包装一下」。你知道这是造假。",
-      "options": [
-        { "label": "帮忙做，老板说的", "value": 1 },
-        { "label": "做，但只做美化，不造假", "value": 2 },
-        { "label": "「这个我不太方便，建议找专业机构」", "value": 3 }
-      ]
-    },
-    {
-      "id": "q24",
-      "dims": ["EMOTION", "CONFLICT"],
-      "scenario": "negative",
-      "smartChoice": 3,
-      "smartNote": "果断止损，不信「会处理好」",
-      "text": "某头部私募被点名批评「交易异常」，客户群里一片骂声。你持有他家的产品。",
-      "options": [
-        { "label": "群里帮解释几句，相信他们会处理好", "value": 1 },
-        { "label": "不说话，私下观察要不要赎回", "value": 2 },
-        { "label": "明天就约赎回，永不再碰这个策略", "value": 3 }
-      ]
-    },
-    {
-      "id": "q25",
-      "dims": ["STRATEGY", "BOUNDARY"],
-      "scenario": "negative",
-      "smartChoice": 3,
-      "smartNote": "坚持原则，不写虚假研报",
-      "text": "领导让你出一篇研报，核心观点是「强烈看好某股」。你发现这只票的财务数据明显有问题。",
-      "options": [
-        { "label": "加一句「需关注财务风险」的免责声明，按领导要求发", "value": 1 },
-        { "label": "硬着头皮发，出了事再说", "value": 2 },
-        { "label": "「这个票财务数据有问题，我写不了看多」，找领导沟通", "value": 3 }
-      ]
-    },
-    {
-      "id": "q26",
-      "dims": ["SOCIAL", "PATIENCE"],
-      "scenario": "negative",
-      "smartChoice": 3,
-      "smartNote": "投资关系，长期回报",
-      "text": "公司降本增笑，你要请重要客户吃饭。领导说：「预算人均80。」",
-      "options": [
-        { "label": "找家人均80的馆子安排", "value": 1 },
-        { "label": "说「好的」，然后自己查查有什么性价比高的", "value": 2 },
-        { "label": "自己贴钱带去人均300的餐厅，「长期关系比这顿饭重要」", "value": 3 }
-      ]
-    },
-    {
-      "id": "q27",
-      "dims": ["FOCUS", "BOUNDARY"],
-      "scenario": "negative",
-      "smartChoice": 3,
-      "smartNote": "表面配合，实则设立边界",
-      "text": "周六凌晨1点，老板在大群发了个链接：「刚看到个新闻，大家研究一下明天开盘的影响。」配了一个微笑表情。",
-      "options": [
-        { "label": "立刻开机开始研究", "value": 1 },
-        { "label": "假装没看到，周一再说", "value": 2 },
-        { "label": "回了「收到」，然后继续睡，周一上班再说", "value": 3 }
-      ]
-    },
-    {
-      "id": "q28",
-      "dims": ["PATIENCE", "EXECUTE"],
-      "scenario": "negative",
-      "smartChoice": 3,
-      "smartNote": "研究成功模式，提取可复制要素",
-      "text": "你的同事每天准点下班，从不加班，但升职却比你快——因为他爸是某大客户的高管。",
-      "options": [
-        { "label": "叹气，命运不公", "value": 1 },
-        { "label": "继续按自己的节奏努力", "value": 2 },
-        { "label": "把他当做案例研究：怎么做到躺赢的，有没有可复制的地方", "value": 3 }
-      ]
-    },
-    {
-      "id": "q29",
-      "dims": ["CONFLICT", "MEMORY"],
-      "scenario": "negative",
-      "smartChoice": 3,
-      "smartNote": "向决策者澄清贡献",
-      "text": "你辛辛苦苦做的方案，被同事拿去向领导汇报，署了他的一个人的名字。领导还表扬了他。",
-      "options": [
-        { "label": "算了，撕破脸对谁都不好", "value": 1 },
-        { "label": "私聊他，「下次记得提前说一声」", "value": 2 },
-        { "label": "找领导沟通，「这个方案我参与了XX部分，想补充一些想法」", "value": 3 }
-      ]
-    },
-    {
-      "id": "q30",
-      "dims": ["SOCIAL", "LEARN"],
-      "scenario": "neutral",
-      "smartChoice": 3,
-      "smartNote": "专业建议，建立信任",
-      "text": "过年亲戚围着你问：「你搞金融的，告诉我买什么股票能赚大钱？」",
-      "options": [
-        { "label": "随便说一个，反正他们也不会真买", "value": 1 },
-        { "label": "「我主要做XX方向，股票不太懂」，转移话题", "value": 2 },
-        { "label": "认真解释：「普通人建议指数基金定投，股票风险比较高」", "value": 3 }
+        { "label": "继续跟老领导保持密切联系，毕竟是他带出来的", "value": 1 },
+        { "label": "立刻向新领导表忠心，主动汇报工作", "value": 2 },
+        { "label": "保持两条线：新领导正常配合，老领导保持联系但不张扬", "value": 3 }
       ]
     }
   ],
