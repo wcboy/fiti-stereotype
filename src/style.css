@@ -155,18 +155,6 @@ body:not(.app-ready) #app {
   align-items: center;
   margin: -1rem -1.75rem 1rem;      /* 挤出卡片外框 */
 }
-.ticker-bar::before {
-  content: "● LIVE ";
-  color: var(--rouge);
-  font-family: var(--font-mono);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  padding: 0 12px;
-  flex-shrink: 0;
-  animation: blink 1.4s infinite;
-}
-@keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0.25; } }
 
 .ticker-track {
   display: flex;
@@ -350,11 +338,6 @@ body:not(.app-ready) #app {
   background: rgba(201, 58, 58, 0.06);
   border-radius: var(--radius-pill);
   margin-bottom: 1.25rem;
-}
-.intro-badge::before {
-  content: "●";
-  color: var(--rouge);
-  animation: blink 1.4s infinite;
 }
 
 .intro-title {
