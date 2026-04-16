@@ -500,14 +500,24 @@ async function init() {
     // 选项按钮（使用打乱后的选项）
     optionsWrap.innerHTML = "";
     const opts = q._shuffledOptions || q.options;
+
+    // 获取当前题目的已选答案（回退后显示之前的选择）
+    const currentAnswer = quiz.getCurrentAnswer();
+
     opts.forEach((opt, idx) => {
       const btn = document.createElement("button");
       btn.type = "button";
       btn.className = "option";
-      btn.dataset.num = String.fromCharCode(65 + idx); // A / B / C
+      btn.dataset.num = String.fromCharCode(65 + idx); // A / B / C / D
       btn.textContent = opt.label;
       // 存储原始 index 供 K 线使用
       const originalIdx = opt._originalIdx;
+
+      // 如果有之前的答案，高亮显示
+      if (currentAnswer && currentAnswer.originalIdx === originalIdx) {
+        btn.classList.add("option-selected");
+      }
+
       btn.addEventListener("click", () => {
         if (btn.dataset.locked === "1") return;
         btn.dataset.locked = "1";

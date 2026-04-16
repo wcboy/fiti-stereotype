@@ -130,14 +130,29 @@ export function createQuiz(questions, config, onComplete) {
     const optionText = selectedOpt?.label || ''
 
     // 记录所有题目作答（包括 anchor）
-    state.allQuestionsAnswered.push({
-      questionId: q.id,
-      questionText: q.text || '',
-      optionValue: optionValue,
-      optionText: optionText,
-      timeSpent: timeSpent,
-      phase: state.phase,
-    })
+    // 检查是否已存在该题的作答记录（回退后重答）
+    const existingAnswerIdx = state.allQuestionsAnswered.findIndex(a => a.questionId === q.id)
+    if (existingAnswerIdx !== -1) {
+      // 更新已有记录
+      state.allQuestionsAnswered[existingAnswerIdx] = {
+        questionId: q.id,
+        questionText: q.text || '',
+        optionValue: optionValue,
+        optionText: optionText,
+        timeSpent: timeSpent,
+        phase: state.phase,
+      }
+    } else {
+      // 添加新记录
+      state.allQuestionsAnswered.push({
+        questionId: q.id,
+        questionText: q.text || '',
+        optionValue: optionValue,
+        optionText: optionText,
+        timeSpent: timeSpent,
+        phase: state.phase,
+      })
+    }
 
     if (state.phase === 'anchor') {
       state.identity = optionValue
@@ -149,6 +164,7 @@ export function createQuiz(questions, config, onComplete) {
       if (q.special) {
         state.special[q.id] = optionValue
       } else {
+        // 更新或添加答案
         state.answers[q.id] = optionValue
       }
       // 记录答题历史（原始 index）
@@ -157,7 +173,16 @@ export function createQuiz(questions, config, onComplete) {
         originalIdx: originalIdx,
         value: optionValue
       }
-      state.answerHistory.push(answerRecord)
+
+      // 检查是否已存在该题的答题历史（回退后重答）
+      const existingHistoryIdx = state.answerHistory.findIndex(r => r.questionId === q.id)
+      if (existingHistoryIdx !== -1) {
+        // 更新已有记录
+        state.answerHistory[existingHistoryIdx] = answerRecord
+      } else {
+        // 添加新记录
+        state.answerHistory.push(answerRecord)
+      }
 
       // 记录作答时间
       state.allAnswerTimes[q.id] = timeSpent
@@ -279,6 +304,16 @@ export function createQuiz(questions, config, onComplete) {
     return state.hasGoneBack
   }
 
+  /**
+   * 获取当前题目的已选答案（用于回退后显示之前的选择）
+   * @returns {Object|null} { questionId, originalIdx, value } 或 null
+   */
+  function getCurrentAnswer() {
+    const q = currentQuestion()
+    if (!q) return null
+    return state.answerHistory.find(r => r.questionId === q.id) || null
+  }
+
   return {
     start,
     answer,
@@ -290,6 +325,7 @@ export function createQuiz(questions, config, onComplete) {
     getScenarioSequence,
     getSmartChoiceSequence,
     hasUsedGoBack,
+    getCurrentAnswer,
     get state() {
       return state
     },
