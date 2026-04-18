@@ -199,7 +199,10 @@ export function renderResult({
       row.className = "dim-row";
       const name = document.createElement("span");
       name.className = "name";
-      name.innerHTML = `${def.name || dim}<small>${dim}</small>`;
+      name.textContent = def.name || dim;
+      const nameSmall = document.createElement("small");
+      nameSmall.textContent = dim;
+      name.appendChild(nameSmall);
       const level = document.createElement("span");
       level.className = `level lvl-${lv}`;
       level.textContent = lv === "H" ? "拉满" : lv === "L" ? "摆烂" : "平衡";

@@ -68,10 +68,13 @@ function renderHistoryList(onHistoryClick) {
   if (!container) return;
 
   const history = getLocalHistory();
-  container.innerHTML = "";
+  container.textContent = "";
 
   if (history.length === 0) {
-    container.innerHTML = '<p class="history-empty">暂无历史记录</p>';
+    const empty = document.createElement("p");
+    empty.className = "history-empty";
+    empty.textContent = "暂无历史记录";
+    container.appendChild(empty);
     return;
   }
 
@@ -80,11 +83,16 @@ function renderHistoryList(onHistoryClick) {
     item.className = "history-item";
     const date = new Date(record.timestamp);
     const dateStr = `${date.getMonth() + 1}/${date.getDate()} ${date.getHours()}:${String(date.getMinutes()).padStart(2, "0")}`;
-    item.innerHTML = `
-      <span class="history-code">${record.code || "—"}</span>
-      <span class="history-name">${record.cn || ""}</span>
-      <span class="history-time">${dateStr}</span>
-    `;
+    const codeSpan = document.createElement("span");
+    codeSpan.className = "history-code";
+    codeSpan.textContent = record.code || "—";
+    const nameSpan = document.createElement("span");
+    nameSpan.className = "history-name";
+    nameSpan.textContent = record.cn || "";
+    const timeSpan = document.createElement("span");
+    timeSpan.className = "history-time";
+    timeSpan.textContent = dateStr;
+    item.append(codeSpan, nameSpan, timeSpan);
     // 点击历史记录显示分享卡片
     item.addEventListener("click", () => {
       if (onHistoryClick) {
@@ -935,5 +943,10 @@ async function init() {
 
 init().catch((err) => {
   console.error(err);
-  document.body.innerHTML = `<div style="padding:2rem;color:#f0e4c8;font-family:sans-serif">加载失败：${err.message}</div>`;
+  const safeMsg = String(err && err.message ? err.message : "未知错误").slice(0, 200);
+  const fallback = document.createElement("div");
+  fallback.style.cssText = "padding:2rem;color:#f0e4c8;font-family:sans-serif";
+  fallback.textContent = `加载失败：${safeMsg}`;
+  document.body.textContent = "";
+  document.body.appendChild(fallback);
 });
