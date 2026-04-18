@@ -1,0 +1,26 @@
+rules_version = '2';
+
+// FBTI Firestore 安全规则
+// 原则：
+//   - 客户端只能向 `results` 集合 create，不得 read / update / delete
+//   - 载荷必须含 timestamp / date / result 字段，且类型正确
+//   - 所有其他集合与路径一律拒绝
+//   - 后台读取通过 Firebase 控制台 / Admin SDK（绕过规则）
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    match /results/{doc} {
+      allow create: if
+        request.resource.data.keys().hasAll(['timestamp', 'date', 'result']) &&
+        request.resource.data.timestamp is number &&
+        request.resource.data.date is string &&
+        request.resource.data.date.size() <= 40 &&
+        request.resource.data.size() <= 20;
+      allow read, update, delete: if false;
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
