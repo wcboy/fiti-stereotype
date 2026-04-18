@@ -338,16 +338,16 @@ export async function renderPoster({
   ctx.stroke();
   cursorY += 24;
 
-  /* ========== §3. "Dear, 附身候选人"（拆两段渲染，避开字形缺失） ========== */
-  const dearLatin = "Dear,";
-  const dearCjk = "附身候选人";
+  /* ========== §3. "Finance Bro，你是"（拆两段渲染，避开字形缺失） ========== */
+  const dearLatin = "Finance Bro";
+  const dearCjk = "，你是";
 
   // 先量测两段宽度用各自字体
   setFont(ctx, 44, 700, FONT_SCRIPT, "italic");
   const wLatin = ctx.measureText(dearLatin).width;
   setFont(ctx, 38, 500, FONT_CJK_SERIF, "italic");
   const wCjk = ctx.measureText(dearCjk).width;
-  const gap = 18;
+  const gap = 10;
   const totalW = wLatin + gap + wCjk;
   const dearX = W / 2 - totalW / 2;
 
@@ -670,7 +670,7 @@ export async function renderPoster({
     console.warn("QR 生成失败", e);
   }
 
-  // 右侧文案
+  // 右侧文案（移除"FINANCE / TI"大字后上方布局收紧）
   const textX = qrX + qrSize + 32;
   setFont(ctx, 20, 700, FONT_MONO);
   ctx.fillStyle = theme.rougeInk;
@@ -678,30 +678,26 @@ export async function renderPoster({
   ctx.textBaseline = "top";
   ctx.fillText("SCAN · 扫码附身", textX, qrY + 2);
 
-  setFont(ctx, 42, 700, FONT_DISPLAY_ASCII);
-  ctx.fillStyle = theme.ink;
-  ctx.fillText("FINANCE / TI", textX, qrY + 32);
-
   setFont(ctx, 17, 500, FONT_MONO);
   ctx.fillStyle = theme.inkDim;
-  ctx.fillText("wcboy.github.io/finance-bro-type-indicator", textX, qrY + 84);
+  ctx.fillText("wcboy.github.io/finance-bro-type-indicator", textX, qrY + 36);
 
   setFont(ctx, 18, 700, FONT_CJK_SANS);
   ctx.fillStyle = theme.rouge;
   ctx.fillText(
     IDENTITY_COMPANY[identity] || IDENTITY_COMPANY.junior,
     textX,
-    qrY + 114,
+    qrY + 66,
   );
 
   setFont(ctx, 28, 700, FONT_SCRIPT, "italic");
   ctx.fillStyle = theme.gold;
   const hashAscii = "#FBTI";
   const hashAsciiW = ctx.measureText(hashAscii).width;
-  ctx.fillText(hashAscii, textX, qrY + 144);
+  ctx.fillText(hashAscii, textX, qrY + 100);
   setFont(ctx, 22, 700, FONT_CJK_SANS);
   ctx.fillStyle = theme.gold;
-  ctx.fillText("#金融人刻板印象测试", textX + hashAsciiW + 14, qrY + 152);
+  ctx.fillText("#金融人刻板印象测试", textX + hashAsciiW + 14, qrY + 108);
 
   // 页脚
   setFont(ctx, 16, 500, FONT_MONO);
