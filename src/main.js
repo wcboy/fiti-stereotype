@@ -14,6 +14,7 @@ import { createQuiz } from "./quiz.js";
 import { renderResult } from "./result.js";
 import { renderRadar } from "./chart.js";
 import { uploadResult } from "./firebaseConfig.js";
+import { validateAll } from "./validate.js";
 import "./style.css";
 
 // 静态导入数据，Vite 打包 tree-shake
@@ -462,6 +463,9 @@ function renderCandleProgress(total, currentIdx, answerHistory = [], smartChoice
 }
 
 async function init() {
+  // 数据层校验：有缺字段直接抛出，由下方 init().catch 走安全错误 UI
+  validateAll({ questions, dimensions, types });
+
   // 动态注入文档 title / meta
   if (config.display?.title) document.title = config.display.title;
 
