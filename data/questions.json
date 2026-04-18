@@ -277,6 +277,34 @@
         { "label": "对新领导保持正常配合，同时低调维护和老领导的关系", "value": 3, "dimScores": { "NETWORK": 2, "SURVIVAL": 2 } },
         { "label": "专注于做好手头工作，让业绩说话，不过多卷入人际站队", "value": 4, "dimScores": { "NETWORK": 1, "SURVIVAL": 2, "BOUNDARY": 3 } }
       ]
+    },
+    {
+      "id": "q20",
+      "dims": ["DECISION", "RISK"],
+      "scenario": "negative",
+      "smartChoice": null,
+      "smartNote": "",
+      "text": "周一开盘A股主板跌4%，你持有70%仓位浮亏8%。研究群、研报、朋友圈观点完全相反——老人说这就是底，年轻人说「底在哪没人知道」。",
+      "options": [
+        { "label": "先不动，观察一两天消息面清晰再说", "value": 1, "dimScores": { "DECISION": 1, "RISK": 2, "PATIENCE": 2 } },
+        { "label": "按预设纪律分批减仓到 40%", "value": 2, "dimScores": { "DECISION": 2, "RISK": 1, "EXECUTE": 3, "STRATEGY": 2 } },
+        { "label": "一把清仓先落袋为安，错过反弹也认", "value": 3, "dimScores": { "DECISION": 3, "RISK": 1, "SURVIVAL": 3 } },
+        { "label": "直接全仓抄底，下跌就是礼物", "value": 4, "dimScores": { "DECISION": 3, "RISK": 3, "CYNICISM": 1 } }
+      ]
+    },
+    {
+      "id": "q21",
+      "dims": ["DECISION", "RISK"],
+      "scenario": "neutral",
+      "smartChoice": null,
+      "smartNote": "",
+      "text": "朋友开了家量化私募，拉你当合伙人，让你出 200 万做初始保证金。他说策略夏普 2.5 但需要 5 倍杠杆，给你 48 小时答复。",
+      "options": [
+        { "label": "找律师、同行、PB 各问一圈，拖到第 47 小时再说", "value": 1, "dimScores": { "DECISION": 1, "RISK": 1, "STRATEGY": 3, "LEARN": 2 } },
+        { "label": "跟他算了一整天 ROI，决定投 50 万试试", "value": 2, "dimScores": { "DECISION": 2, "RISK": 2, "STRATEGY": 2 } },
+        { "label": "5 倍杠杆这种我不玩，直接婉拒", "value": 3, "dimScores": { "DECISION": 3, "RISK": 1, "CYNICISM": 2, "BOUNDARY": 3 } },
+        { "label": "这种机会错过就没了，全仓加杠杆 ALL IN", "value": 4, "dimScores": { "DECISION": 3, "RISK": 3, "CYNICISM": 1 } }
+      ]
     }
   ],
   "special": [
